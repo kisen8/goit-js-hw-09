@@ -12,7 +12,7 @@ const minutes = document.querySelector('span[data-minutes]');
 const seconds = document.querySelector('span[data-seconds]');
 
 let timerId = null;
-timeTimer.style.color = 'green';
+
 btnStart.disabled = true;
 
 const options = {
@@ -39,6 +39,7 @@ function addLeadingZero(value) {
 btnStart.addEventListener('click', () => {
   timerId = setInterval(() => {
     btnStart.disabled = true;
+    timeTimer.style.color = 'green';
     let difference = new Date(input.value) - new Date();
 
     if (difference >= 0) {
@@ -52,7 +53,7 @@ btnStart.addEventListener('click', () => {
       }
     } else {
       Notiflix.Notify.success('Timer finished!!!');
-      timeTimer.style.color = 'green';
+
       clearInterval(timerId);
     }
   }, 1000);
