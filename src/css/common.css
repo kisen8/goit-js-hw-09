@@ -35,8 +35,6 @@ button {
 button:hover,
 button:focus {
   cursor: pointer;
-  color: #f7f1f1;
-  background-color: rgb(230, 105, 105);
 }
 .value {
   font-size: 80px;
