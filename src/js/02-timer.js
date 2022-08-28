@@ -39,7 +39,6 @@ function addLeadingZero(value) {
 btnStart.addEventListener('click', () => {
   timerId = setInterval(() => {
     btnStart.disabled = true;
-    timeTimer.style.color = 'green';
     let difference = new Date(input.value) - new Date();
 
     if (difference >= 0) {
