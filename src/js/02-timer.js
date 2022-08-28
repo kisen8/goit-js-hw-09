@@ -38,15 +38,15 @@ function addLeadingZero(value) {
 btnStart.addEventListener('click', () => {
   timerId = setInterval(() => {
     btnStart.disabled = true;
-    let timeDifference = new Date(input.value) - new Date();
+    let difference = new Date(input.value) - new Date();
 
-    if (timeDifference >= 0) {
-      timeObject = convertMs(timeDifference);
+    if (difference >= 0) {
+      let timeObject = convertMs(difference);
       days.textContent = addLeadingZero(timeObject.days);
       hours.textContent = addLeadingZero(timeObject.hours);
       minutes.textContent = addLeadingZero(timeObject.minutes);
       seconds.textContent = addLeadingZero(timeObject.seconds);
-      if (timeDifference <= 10000) {
+      if (difference <= 10000) {
         timeTimer.style.color = 'red';
       }
     } else {
