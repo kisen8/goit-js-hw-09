@@ -51,7 +51,7 @@ btnStart.addEventListener('click', () => {
       }
     } else {
       Notiflix.Notify.success('Timer finished!!!');
-      timeTimer.style.color = 'green';
+      //   timeTimer.style.color = 'green';
       clearInterval(timerId);
     }
   }, 1000);
