@@ -52,7 +52,7 @@ btnStart.addEventListener('click', () => {
       }
     } else {
       Notiflix.Notify.success('Timer finished!!!');
-
+      timeTimer.style.color = 'black';
       clearInterval(timerId);
     }
   }, 1000);
