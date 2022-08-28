@@ -12,6 +12,16 @@ body {
   line-height: 1.5;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(68, 4, 195);
+  font-family: cursive;
+}
+li {
+  list-style: none;
+  font-size: 40px;
+}
+
 img {
   display: block;
   max-width: 100%;
