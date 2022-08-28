@@ -38,20 +38,20 @@ function addLeadingZero(value) {
 btnStart.addEventListener('click', () => {
   timerId = setInterval(() => {
     btnStart.disabled = true;
-    let countDown = new Date(input.value) - new Date();
+    let timeDifference = new Date(input.value) - new Date();
 
-    if (countDown >= 0) {
-      timeObject = convertMs(countDown);
+    if (timeDifference >= 0) {
+      timeObject = convertMs(timeDifference);
       days.textContent = addLeadingZero(timeObject.days);
       hours.textContent = addLeadingZero(timeObject.hours);
       minutes.textContent = addLeadingZero(timeObject.minutes);
       seconds.textContent = addLeadingZero(timeObject.seconds);
-      if (countDown <= 10000) {
+      if (timeDifference <= 10000) {
         timeTimer.style.color = 'red';
       }
     } else {
-      Notiflix.Notify.success('Countdown finished');
-      timeTimer.style.color = 'black';
+      Notiflix.Notify.success('Timer finished!!!');
+      timeTimer.style.color = 'green';
       clearInterval(timerId);
     }
   }, 1000);
