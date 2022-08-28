@@ -12,6 +12,7 @@ const minutes = document.querySelector('span[data-minutes]');
 const seconds = document.querySelector('span[data-seconds]');
 
 let timerId = null;
+timeTimer.style.color = 'green';
 btnStart.disabled = true;
 
 const options = {
