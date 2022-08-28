@@ -41,7 +41,7 @@ btnStart.addEventListener('click', () => {
     let difference = new Date(input.value) - new Date();
 
     if (difference >= 0) {
-      let timeObject = convertMs(difference);
+      timeObject = convertMs(difference);
       days.textContent = addLeadingZero(timeObject.days);
       hours.textContent = addLeadingZero(timeObject.hours);
       minutes.textContent = addLeadingZero(timeObject.minutes);
